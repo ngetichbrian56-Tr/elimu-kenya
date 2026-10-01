@@ -1,6 +1,7 @@
 (async () => {
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const mono = n => n.split(' ').filter(w => /^[A-Z]/.test(w)).map(w => w[0]).join('').slice(0, 3);
   const LEVELS = ["Bachelor's", "Master's", "PhD", "PG Diploma"];
 
   // ---------- Load data ----------
@@ -25,7 +26,7 @@
   D.i.forEach(i => { countyCount[i.county] = (countyCount[i.county] || 0) + 1; });
 
   // ---------- State ----------
-  const S = { county: '', area: 0, q: '' };
+  const S = { county: '', area: 0, q: '', u: '' };
   let level = -1, filter = '', slug = '';
   const openAreas = new Set();
 
@@ -46,18 +47,20 @@
 
     const q = S.q.trim();
     const searching = S.area || q;
-    const list = D.i.filter(i => (!S.county || i.county === S.county) && (!searching || matching(i).length));
+    const u = S.u.trim().toLowerCase();
+    const list = D.i.filter(i => (!S.county || i.county === S.county) && (!u || i.name.toLowerCase().includes(u)) && (!searching || matching(i).length));
 
     $('count').innerHTML = `<b>${list.length} institution${list.length === 1 ? '' : 's'}</b>` +
       (S.county ? ' in ' + esc(S.county) : ' in Kenya') +
       (S.area ? ' offering ' + esc(D.a.find(a => a.id === S.area).name) : '') +
-      (q ? ' matching "' + esc(q) + '"' : '');
+      (q ? ' matching "' + esc(q) + '"' : '') +
+      (u ? ' named "' + esc(S.u.trim()) + '"' : '');
 
     $('results').innerHTML = list.length ? list.map(i => {
       const n = searching ? matching(i).length : (progsBy[i.id] || []).length;
       const line = n ? n + (searching ? ' matching programme' + (n === 1 ? '' : 's') : ' approved programmes') : 'Programmes not yet listed';
-      return `<button class="row" data-slug="${esc(i.slug)}"><h3>${esc(i.name)}</h3>` +
-        `<p><span class="badge">${esc(i.type)}</span>${esc(i.town || i.county || '')}</p><p>${line}</p></button>`;
+      return `<button class="row" data-slug="${esc(i.slug)}"><span class="mono">${esc(mono(i.name))}</span><span class="rb"><h3>${esc(i.name)}</h3>` +
+        `<p>${esc(i.town || i.county || '')}${i.county && i.town !== i.county ? ', ' + esc(i.county) : ''}</p><p><span class="badge">${esc(i.type)}</span>${line}</p></span></button>`;
     }).join('') : '<div class="empty">No institutions match. Try a different county, choose "Any course", or shorten your search.</div>';
   }
 
@@ -92,13 +95,13 @@
     if (i.phone) contact.push('Phone: ' + esc(i.phone));
 
     $('prof').innerHTML =
-      `<div class="banner"><button class="back" id="back">← Results</button><h1>${esc(i.name)}</h1></div>` +
+      `<div class="banner"><button class="back" id="back">← Results</button><span class="mono">${esc(mono(i.name))}</span><h1>${esc(i.name)}</h1></div>` +
       `<div class="stats"><div class="stat"><b>${esc(i.type)}</b><span>Type</span></div>` +
-      `<div class="stat"><b>${i.yc || 'n/a'}</b><span>Chartered</span></div>` +
+      `<div class="stat"><b>${i.yc || 'n/a'}</b><span>Year chartered</span></div>` +
       `<div class="stat"><b>${all.length}</b><span>Programmes</span></div></div>` +
       `<p class="about">${esc(i.bg || '')} Located in ${esc(i.town || i.county || 'Kenya')}${i.county ? ', ' + esc(i.county) + ' County' : ''}.</p>` +
-      `<div class="sec">Fees and deadlines</div><div class="feebox">${feesBox(i)}</div>` +
-      `<div class="sec">Programmes offered</div>` +
+      `<div class="sec">Fees and how to apply</div><div class="feebox">${feesBox(i)}</div>` +
+      `<div class="sec">Programmes you can study</div>` +
       `<div class="tools"><div class="chips" id="lvls">${['All', ...LEVELS].map((n, k) => `<button class="chip" data-level="${k - 1}" aria-pressed="false">${esc(n)}</button>`).join('')}</div>` +
       `<input id="pq" type="search" placeholder="Filter programmes" aria-label="Filter programmes" value="${esc(filter)}"></div>` +
       `<div id="plist"></div>` +
@@ -148,6 +151,7 @@
 
   $('county').addEventListener('change', e => { S.county = e.target.value; drawHome(); });
   $('q').addEventListener('input', e => { S.q = e.target.value; drawHome(); });
+  $('u').addEventListener('input', e => { S.u = e.target.value; drawHome(); });
   document.addEventListener('input', e => {
     if (e.target.id === 'pq') {
       filter = e.target.value.trim().toLowerCase();
