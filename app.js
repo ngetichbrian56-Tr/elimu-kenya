@@ -1,0 +1,165 @@
+(async () => {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const LEVELS = ["Bachelor's", "Master's", "PhD", "PG Diploma"];
+
+  // ---------- Load data ----------
+  let D, X = {};
+  try {
+    const r = await fetch('data/data.json');
+    if (!r.ok) throw new Error('data.json returned status ' + r.status);
+    D = await r.json();
+  } catch (err) {
+    $('count').innerHTML = '<b>Could not load data/data.json.</b> Check that the file exists inside the data folder and is not empty. (' + esc(err.message) + ')';
+    return;
+  }
+  try {
+    const r = await fetch('data/extras.json');
+    if (r.ok) X = await r.json();
+  } catch (err) { /* extras are optional */ }
+
+  // ---------- Indexes ----------
+  const progsBy = {};
+  D.p.forEach(p => (progsBy[p[0]] = progsBy[p[0]] || []).push(p));
+  const countyCount = {};
+  D.i.forEach(i => { countyCount[i.county] = (countyCount[i.county] || 0) + 1; });
+
+  // ---------- State ----------
+  const S = { county: '', area: 0, q: '' };
+  let level = -1, filter = '', slug = '';
+  const openAreas = new Set();
+
+  // ---------- Home screen ----------
+  function drawCounties() {
+    $('county').innerHTML = '<option value="">All counties</option>' +
+      D.c.map(n => `<option value="${esc(n)}"${n === S.county ? ' selected' : ''}>${esc(n)} (${countyCount[n] || 0})</option>`).join('');
+  }
+
+  function matching(inst) {
+    const q = S.q.trim().toLowerCase();
+    return (progsBy[inst.id] || []).filter(p => (!S.area || p[1] === S.area) && (!q || p[2].toLowerCase().includes(q)));
+  }
+
+  function drawHome() {
+    $('areas').innerHTML = [{ id: 0, name: 'Any course' }, ...D.a]
+      .map(a => `<button class="chip" data-area="${a.id}" aria-pressed="${S.area === a.id}">${esc(a.name)}</button>`).join('');
+
+    const q = S.q.trim();
+    const searching = S.area || q;
+    const list = D.i.filter(i => (!S.county || i.county === S.county) && (!searching || matching(i).length));
+
+    $('count').innerHTML = `<b>${list.length} institution${list.length === 1 ? '' : 's'}</b>` +
+      (S.county ? ' in ' + esc(S.county) : ' in Kenya') +
+      (S.area ? ' offering ' + esc(D.a.find(a => a.id === S.area).name) : '') +
+      (q ? ' matching "' + esc(q) + '"' : '');
+
+    $('results').innerHTML = list.length ? list.map(i => {
+      const n = searching ? matching(i).length : (progsBy[i.id] || []).length;
+      const line = n ? n + (searching ? ' matching programme' + (n === 1 ? '' : 's') : ' approved programmes') : 'Programmes not yet listed';
+      return `<button class="row" data-slug="${esc(i.slug)}"><h3>${esc(i.name)}</h3>` +
+        `<p><span class="badge">${esc(i.type)}</span>${esc(i.town || i.county || '')}</p><p>${line}</p></button>`;
+    }).join('') : '<div class="empty">No institutions match. Try a different county, choose "Any course", or shorten your search.</div>';
+  }
+
+  // ---------- University screen ----------
+  function feesBox(i) {
+    const x = X[i.slug] || X._default || {};
+    const parts = [];
+    if (x.fees) parts.push('<div><b>Tuition and fees</b><br>' + esc(x.fees) + '</div>');
+    if (x.deadline) parts.push('<div><b>Application deadline</b><br>' + esc(x.deadline) + '</div>');
+    if (x.apply) parts.push('<div><a href="' + esc(x.apply) + '" target="_blank" rel="noopener">Official application page</a></div>');
+    if (parts.length) return parts.join('') + (x.updated ? '<small>Last checked: ' + esc(x.updated) + '</small>' : '');
+    return 'Not added yet.' + (i.web ? ' Check <a href="' + esc(i.web) + '" target="_blank" rel="noopener">the university website</a> for current fees and deadlines.' : '');
+  }
+
+  function drawProgrammes(i) {
+    const all = progsBy[i.id] || [];
+    const shown = all.filter(p => (level < 0 || p[3] === level) && (!filter || p[2].toLowerCase().includes(filter)));
+    const groups = D.a.map(a => ({ a, rows: shown.filter(p => p[1] === a.id) })).filter(g => g.rows.length);
+    $('plist').innerHTML = groups.length ? groups.map(g => {
+      const open = openAreas.has(g.a.id) || filter || (S.area && S.area === g.a.id);
+      return `<details data-area="${g.a.id}"${open ? ' open' : ''}><summary>${esc(g.a.name)}<span>${g.rows.length} programme${g.rows.length === 1 ? '' : 's'}</span></summary>` +
+        g.rows.map(p => `<div class="prog"><span>${esc(p[2])}</span><span class="lv">${LEVELS[p[3]] || ''}${p[4] ? '<br>' + p[4] : ''}</span></div>`).join('') + '</details>';
+    }).join('') : `<div class="empty">${all.length ? 'No programmes match these filters.' : 'Programmes for this institution are not in the CUE list yet.'}</div>`;
+    document.querySelectorAll('#lvls .chip').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.level === level)));
+  }
+
+  function drawProfile(i) {
+    const all = progsBy[i.id] || [];
+    const contact = [];
+    if (i.web) contact.push('Website: <a href="' + esc(i.web) + '" target="_blank" rel="noopener">' + esc(i.web.replace(/^https?:\/\//, '')) + '</a>');
+    if (i.email) contact.push('Email: ' + esc(i.email));
+    if (i.phone) contact.push('Phone: ' + esc(i.phone));
+
+    $('prof').innerHTML =
+      `<div class="banner"><button class="back" id="back">← Results</button><h1>${esc(i.name)}</h1></div>` +
+      `<div class="stats"><div class="stat"><b>${esc(i.type)}</b><span>Type</span></div>` +
+      `<div class="stat"><b>${i.yc || 'n/a'}</b><span>Chartered</span></div>` +
+      `<div class="stat"><b>${all.length}</b><span>Programmes</span></div></div>` +
+      `<p class="about">${esc(i.bg || '')} Located in ${esc(i.town || i.county || 'Kenya')}${i.county ? ', ' + esc(i.county) + ' County' : ''}.</p>` +
+      `<div class="sec">Fees and deadlines</div><div class="feebox">${feesBox(i)}</div>` +
+      `<div class="sec">Programmes offered</div>` +
+      `<div class="tools"><div class="chips" id="lvls">${['All', ...LEVELS].map((n, k) => `<button class="chip" data-level="${k - 1}" aria-pressed="false">${esc(n)}</button>`).join('')}</div>` +
+      `<input id="pq" type="search" placeholder="Filter programmes" aria-label="Filter programmes" value="${esc(filter)}"></div>` +
+      `<div id="plist"></div>` +
+      `<div class="sec">Contact</div><div class="contact">${contact.length ? contact.join('<br>') : 'Contact details not yet available.'}` +
+      `<br><small>Contact details are unverified. Check the university's official site.</small></div>`;
+    drawProgrammes(i);
+  }
+
+  // ---------- Routing ----------
+  function route() {
+    const m = location.hash.match(/^#\/u\/(.+)$/);
+    if (m) {
+      const i = D.i.find(x => x.slug === m[1]);
+      if (!i) { location.hash = ''; return; }
+      if (slug !== m[1]) { level = -1; filter = ''; openAreas.clear(); slug = m[1]; }
+      $('home').classList.add('hide');
+      $('prof').classList.remove('hide');
+      drawProfile(i);
+      window.scrollTo(0, 0);
+      document.title = i.name + ' | Elimu Kenya';
+    } else {
+      slug = '';
+      $('prof').classList.add('hide');
+      $('home').classList.remove('hide');
+      document.title = 'Elimu Kenya: Find a public university';
+      drawHome();
+    }
+  }
+
+  // ---------- Events ----------
+  document.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    if (b.id === 'back') { location.hash = ''; }
+    else if (b.dataset.slug) { location.hash = '#/u/' + b.dataset.slug; }
+    else if (b.dataset.level !== undefined) { level = +b.dataset.level; drawProgrammes(D.i.find(x => x.slug === slug)); }
+    else if (b.dataset.area !== undefined && !b.closest('#prof')) { S.area = +b.dataset.area; drawHome(); }
+  });
+
+  document.addEventListener('toggle', e => {
+    const d = e.target;
+    if (d.tagName === 'DETAILS' && d.dataset.area) {
+      const id = +d.dataset.area;
+      d.open ? openAreas.add(id) : openAreas.delete(id);
+    }
+  }, true);
+
+  $('county').addEventListener('change', e => { S.county = e.target.value; drawHome(); });
+  $('q').addEventListener('input', e => { S.q = e.target.value; drawHome(); });
+  document.addEventListener('input', e => {
+    if (e.target.id === 'pq') {
+      filter = e.target.value.trim().toLowerCase();
+      drawProgrammes(D.i.find(x => x.slug === slug));
+    }
+  });
+  window.addEventListener('hashchange', route);
+
+  // ---------- Start ----------
+  drawCounties();
+  route();
+  if ('serviceWorker' in navigator) {
+    addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  }
+})();

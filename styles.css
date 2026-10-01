@@ -1,0 +1,39 @@
+:root{--bg:#f3efe6;--card:#fffdf8;--ink:#1d2a22;--mute:#5d6a62;--line:#ddd6c6;--green:#1c5a3a;--soft:#dcebe1;--red:#b3341f;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b17;--card:#1d2721;--ink:#eef1ea;--mute:#a3b0a8;--line:#2e3a33;--green:#5fb583;--soft:#25382d;--red:#e2705c;--on:#0f1a13}}
+:root[data-theme="dark"]{--bg:#141b17;--card:#1d2721;--ink:#eef1ea;--mute:#a3b0a8;--line:#2e3a33;--green:#5fb583;--soft:#25382d;--red:#e2705c;--on:#0f1a13}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,Arial,sans-serif;display:flex;justify-content:center}
+.app{width:100%;max-width:560px;min-height:100vh;padding-bottom:40px}
+header{padding:22px 18px 12px}.brand{font-weight:800;font-size:28px;letter-spacing:-.02em;color:var(--green)}.brand span{color:var(--red)}
+.tag{color:var(--mute);font-size:14px;margin-top:2px}
+.block{margin:0 14px 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.block h2{margin:0 0 10px;font-size:15px;font-weight:600}.block h2 small{font-weight:400;color:var(--mute);margin-left:6px}
+select,input{width:100%;font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:14px;padding:6px 12px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);color:var(--on);border-color:var(--green)}
+:is(button,select,input,summary,a):focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.count{margin:14px 18px 8px;font-size:14px;color:var(--mute)}.count b{color:var(--ink)}
+.row{display:block;width:calc(100% - 28px);margin:0 14px 10px;text-align:left;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer}
+.row h3{margin:0;font-size:17px;font-weight:600}.row p{margin:4px 0 0;font-size:13px;color:var(--mute)}
+.badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:6px;background:var(--soft);color:var(--green);margin-right:6px}
+.empty{margin:14px;padding:18px;border:1px dashed var(--line);border-radius:12px;color:var(--mute);font-size:14px}
+.banner{min-height:130px;background:linear-gradient(135deg,#1c5a3a,#0e3322);display:flex;align-items:flex-end;padding:56px 18px 16px;color:#fff;position:relative}
+.banner h1{margin:0;font-size:24px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
+.back{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.2);color:#fff;border:0;border-radius:999px;font:inherit;font-size:14px;padding:6px 12px;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}.stat b{display:block;font-size:17px}.stat span{font-size:12px;color:var(--mute)}
+.about{margin:0 18px 12px;font-size:14px;line-height:1.55;color:var(--mute)}
+.sec{margin:18px 18px 8px;font-size:16px;font-weight:600}
+.tools{margin:0 14px 10px;display:grid;gap:8px}
+details{margin:0 14px 8px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+summary{cursor:pointer;padding:13px 14px;display:flex;justify-content:space-between;gap:10px;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}summary span{font-weight:400;color:var(--mute);font-size:13px}
+details[open] summary{background:var(--soft);border-radius:12px 12px 0 0}
+.prog{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;font-size:14px;border-top:1px solid var(--line)}
+.lv{font-size:12px;color:var(--mute);white-space:nowrap;text-align:right}
+.contact{margin:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+.contact a{color:var(--green)}.note{margin:14px 18px 0;font-size:12px;color:var(--mute);line-height:1.5}
+.feebox{margin:0 14px 10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:14px;line-height:1.6;display:grid;gap:10px;color:var(--mute)}
+.feebox b{color:var(--ink)}.feebox a{color:var(--green)}.feebox small{font-size:12px}
+.hide{display:none}
