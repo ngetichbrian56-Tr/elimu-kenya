@@ -4,6 +4,22 @@
   const mono = n => n.split(' ').filter(w => /^[A-Z]/.test(w)).map(w => w[0]).join('').slice(0, 3);
   const LEVELS = ["Bachelor's", "Master's", "PhD", "PG Diploma"];
 
+  // Fixes corrupted programme names (stray page numbers, digits spliced into words).
+  const cleanName = s => {
+    let t = String(s || '');
+    if (/[A-Za-z]\d+[A-Za-z)]/.test(t)) t = t.replace(/\d/g, '');
+    return t.replace(/\s+\d{1,3}$/, '').replace(/[\s,;]+$/, '').replace(/\s{2,}/g, ' ').trim();
+  };
+
+  // Shown on every university page. Per-university details in data/extras.json are added below it.
+  const FUNDING_NOTE =
+    '<div><b>How fees work</b><br>Public university fees depend on your funding band under the government\'s New Funding Model, ' +
+    'not only on the university. Needy students can receive a tuition scholarship plus a HELB loan, and pay a smaller household contribution. ' +
+    'Private universities are eligible for HELB loans only.</div>' +
+    '<div><b>How to apply</b><br>Apply through KUCCPS at ' +
+    '<a href="https://students.kuccps.ac.ke" target="_blank" rel="noopener">students.kuccps.ac.ke</a>. ' +
+    'Application dates change every year, so check the portal for the current window.</div>';
+
   // ---------- Load data ----------
   let D, X = {};
   try {
@@ -19,6 +35,8 @@
     if (r.ok) X = await r.json();
   } catch (err) { /* extras are optional */ }
 
+  D.p.forEach(p => { p[2] = cleanName(p[2]); });
+
   // ---------- Indexes ----------
   const progsBy = {};
   D.p.forEach(p => (progsBy[p[0]] = progsBy[p[0]] || []).push(p));
@@ -33,7 +51,7 @@
   // ---------- Home screen ----------
   function drawCounties() {
     $('county').innerHTML = '<option value="">All counties</option>' +
-      D.c.map(n => `<option value="${esc(n)}"${n === S.county ? ' selected' : ''}>${esc(n)} (${countyCount[n] || 0})</option>`).join('');
+      D.c.filter(n => countyCount[n]).map(n => `<option value="${esc(n)}"${n === S.county ? ' selected' : ''}>${esc(n)} (${countyCount[n] || 0})</option>`).join('');
   }
 
   function matching(inst) {
@@ -66,13 +84,14 @@
 
   // ---------- University screen ----------
   function feesBox(i) {
-    const x = X[i.slug] || X._default || {};
-    const parts = [];
-    if (x.fees) parts.push('<div><b>Tuition and fees</b><br>' + esc(x.fees) + '</div>');
+    const x = X[i.slug] || {};
+    const parts = [FUNDING_NOTE];
+    if (x.fees) parts.push('<div><b>Tuition and fees at this university</b><br>' + esc(x.fees) + '</div>');
     if (x.deadline) parts.push('<div><b>Application deadline</b><br>' + esc(x.deadline) + '</div>');
     if (x.apply) parts.push('<div><a href="' + esc(x.apply) + '" target="_blank" rel="noopener">Official application page</a></div>');
-    if (parts.length) return parts.join('') + (x.updated ? '<small>Last checked: ' + esc(x.updated) + '</small>' : '');
-    return 'Not added yet.' + (i.web ? ' Check <a href="' + esc(i.web) + '" target="_blank" rel="noopener">the university website</a> for current fees and deadlines.' : '');
+    if (!x.fees && i.web) parts.push('<div>For this university\'s fee schedule, see <a href="' + esc(i.web) + '" target="_blank" rel="noopener">its official website</a>.</div>');
+    if (x.updated) parts.push('<small>Last checked: ' + esc(x.updated) + '</small>');
+    return parts.join('');
   }
 
   function drawProgrammes(i) {
