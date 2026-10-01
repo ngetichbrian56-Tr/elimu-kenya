@@ -1,5 +1,53 @@
-const V='elimu-v3';
-const CORE=['./','index.html','styles.css','app.js','data/data.json','data/extras.json','manifest.webmanifest','icon-192.png','icon-512.png'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(V).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(V).then(x=>x.put(e.request,c));return r}).catch(()=>caches.match(e.request).then(m=>m||caches.match('index.html'))))});
+// Elimu Kenya service worker
+// Change this version every time you upload new files, so phones fetch them.
+const CACHE = 'elimu-kenya-v2';
+
+const SHELL = [
+  './',
+  'index.html',
+  'app.js',
+  'styles.css',
+  'manifest.webmanifest',
+  'data/data.json',
+  'data/extras.json'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE).then(cache =>
+      // Add files one by one so a single missing file doesn't break the install
+      Promise.all(SHELL.map(url => cache.add(url).catch(() => null)))
+    )
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim())
+  );
+});
+
+// Network first: you always get the newest files when online,
+// and the cached copy when offline.
+self.addEventListener('fetch', event => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  if (new URL(req.url).origin !== self.location.origin) return;
+
+  event.respondWith(
+    fetch(req)
+      .then(res => {
+        if (res && res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then(cache => cache.put(req, copy));
+        }
+        return res;
+      })
+      .catch(() =>
+        caches.match(req).then(hit => hit || caches.match('index.html'))
+      )
+  );
+});
