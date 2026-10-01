@@ -11,6 +11,9 @@
     return t.replace(/\s+\d{1,3}$/, '').replace(/[\s,;]+$/, '').replace(/\s{2,}/g, ' ').trim();
   };
 
+  // Adds a full stop to a sentence that doesn't end in punctuation.
+  const sentence = s => String(s || '').trim().replace(/([^.!?\s])$/, '$1.');
+
   // Shown on every university page. Per-university details in data/extras.json are added below it.
   const FUNDING_NOTE =
     '<div><b>How fees work</b><br>Public university fees depend on your funding band under the government\'s New Funding Model, ' +
@@ -118,7 +121,7 @@
       `<div class="stats"><div class="stat"><b>${esc(i.type)}</b><span>Type</span></div>` +
       `<div class="stat"><b>${i.yc || 'n/a'}</b><span>Year chartered</span></div>` +
       `<div class="stat"><b>${all.length}</b><span>Programmes</span></div></div>` +
-      `<p class="about">${esc(i.bg || '')} Located in ${esc(i.town || i.county || 'Kenya')}${i.county ? ', ' + esc(i.county) + ' County' : ''}.</p>` +
+      `<p class="about">${i.bg ? esc(sentence(i.bg)) + ' ' : ''}Located in ${esc(i.town || i.county || 'Kenya')}${i.county ? ', ' + esc(i.county) + ' County' : ''}.</p>` +
       `<div class="sec">Fees and how to apply</div><div class="feebox">${feesBox(i)}</div>` +
       `<div class="sec">Programmes you can study</div>` +
       `<div class="tools"><div class="chips" id="lvls">${['All', ...LEVELS].map((n, k) => `<button class="chip" data-level="${k - 1}" aria-pressed="false">${esc(n)}</button>`).join('')}</div>` +
