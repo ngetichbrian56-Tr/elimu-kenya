@@ -3,5 +3,40 @@
     "fees": "See the fees page on uonbi.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
+  },
+  "kenyatta-university": {
+    "fees": "See the fees page on ku.ac.ke for the current schedule. Fees differ for students admitted in different years, so check the one for your intake.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "moi-university": {
+    "fees": "See the fees page on mu.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "egerton-university": {
+    "fees": "See the fees page on egerton.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "jomo-kenyatta-university-of-agriculture-and-technology": {
+    "fees": "See the fees page on jkuat.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "maseno-university": {
+    "fees": "See the fees page on maseno.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "technical-university-of-kenya": {
+    "fees": "See the fees page on tukenya.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "dedan-kimathi-university-of-technology": {
+    "fees": "See the fees page on dkut.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
   }
 }
