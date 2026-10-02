@@ -95,5 +95,29 @@
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
+  },
+  "kisii-university": {
+    "email": "info@kisiiuniversity.ac.ke",
+    "phone": "0720 875 082",
+    "address": "P.O. Box 408-40200, Kisii",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "jaramogi-oginga-odinga-university-of-science-and-technology": {
+    "email": "racademic@jooust.ac.ke",
+    "phone": "0704 314 648 (Registrar, Academic Affairs)",
+    "address": "P.O. Box 210-40601, Bondo",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "technical-university-of-mombasa": {
+    "email": "info@tum.ac.ke",
+    "phone": "0733 955 377",
+    "address": "Tom Mboya Street, Tudor, Mombasa. P.O. Box 90420-80100",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
   }
 }
