@@ -1,6 +1,6 @@
 // Elimu Kenya service worker
 // Change this version every time you upload new files, so phones fetch them.
-const CACHE = 'elimu-kenya-v2';
+const CACHE = 'elimu-kenya-v4';
 
 const SHELL = [
   './',
@@ -9,7 +9,8 @@ const SHELL = [
   'styles.css',
   'manifest.webmanifest',
   'data/data.json',
-  'data/extras.json'
+  'data/extras.json',
+  'data/private.json'
 ];
 
 self.addEventListener('install', event => {
