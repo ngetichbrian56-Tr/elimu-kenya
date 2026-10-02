@@ -79,5 +79,21 @@
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
+  },
+  "meru-university-of-science-and-technology": {
+    "email": "admission@must.ac.ke",
+    "phone": "0712 524 293, 0799 529 958",
+    "address": "P.O. Box 972-60200, Meru",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "south-eastern-kenya-university": {
+    "email": "info@seku.ac.ke",
+    "phone": "0748 605 997",
+    "address": "P.O. Box 170-90200, Kitui",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
   }
 }
