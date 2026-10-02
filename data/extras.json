@@ -2,7 +2,11 @@
   "university-of-nairobi": {
     "fees": "See the fees page on uonbi.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "admissions@uonbi.ac.ke",
+    "phone": "+254 20 491 0000",
+    "address": "P.O. Box 30197-00100, Nairobi",
+    "contactChecked": "October 2026"
   },
   "kenyatta-university": {
     "fees": "See the fees page on ku.ac.ke for the current schedule. Fees differ for students admitted in different years, so check the one for your intake.",
@@ -25,27 +29,47 @@
   "egerton-university": {
     "fees": "See the fees page on egerton.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "admissions@egerton.ac.ke",
+    "phone": "0772 817 106 (admissions)",
+    "address": "P.O. Box 536-20115, Egerton-Njoro",
+    "contactChecked": "October 2026"
   },
   "jomo-kenyatta-university-of-agriculture-and-technology": {
     "fees": "See the fees page on jkuat.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "customercare@jkuat.ac.ke",
+    "phone": "0709 715 815 (contact centre)",
+    "address": "P.O. Box 62000-00200, Nairobi",
+    "contactChecked": "October 2026"
   },
   "maseno-university": {
     "fees": "See the fees page on maseno.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "reg.asa@maseno.ac.ke",
+    "phone": "0715 469 266",
+    "address": "Private Bag, Maseno",
+    "contactChecked": "October 2026"
   },
   "technical-university-of-kenya": {
     "fees": "See the fees page on tukenya.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "admissions@students.tukenya.ac.ke",
+    "phone": "+254 20 2982182 (admissions)",
+    "address": "P.O. Box 52428-00200, Nairobi (Haile Selassie Avenue)",
+    "contactChecked": "October 2026"
   },
   "dedan-kimathi-university-of-technology": {
     "fees": "See the fees page on dkut.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "admissionsoffice@dkut.ac.ke",
+    "phone": "0709 202 914 (registrar), 0713 123 021 (marketing)",
+    "address": "P.O. Box 657-10100, Nyeri",
+    "contactChecked": "October 2026"
   },
   "makueni-university-college": {
     "web": "https://www.muco.ac.ke",
