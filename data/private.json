@@ -1,0 +1,6 @@
+[
+  {"id":90001,"slug":"strathmore-university","name":"Strathmore University","type":"Private university","county":"Nairobi","town":"Nairobi","web":"https://www.strathmore.edu"},
+  {"id":90002,"slug":"usiu-africa","name":"United States International University Africa (USIU-Africa)","type":"Private university","county":"Nairobi","town":"Nairobi","web":"https://www.usiu.ac.ke"},
+  {"id":90003,"slug":"kenya-methodist-university","name":"Kenya Methodist University","type":"Private university","county":"Meru","town":"Meru","web":"https://www.kemu.ac.ke"},
+  {"id":90004,"slug":"mount-kenya-university","name":"Mount Kenya University","type":"Private university","county":"Kiambu","town":"Thika","web":"https://www.mku.ac.ke"}
+]
