@@ -1,6 +1,164 @@
 [
-  {"id":90001,"slug":"strathmore-university","name":"Strathmore University","type":"Private university","county":"Nairobi","town":"Nairobi","web":"https://www.strathmore.edu"},
-  {"id":90002,"slug":"usiu-africa","name":"United States International University Africa (USIU-Africa)","type":"Private university","county":"Nairobi","town":"Nairobi","web":"https://www.usiu.ac.ke"},
-  {"id":90003,"slug":"kenya-methodist-university","name":"Kenya Methodist University","type":"Private university","county":"Meru","town":"Meru","web":"https://www.kemu.ac.ke"},
-  {"id":90004,"slug":"mount-kenya-university","name":"Mount Kenya University","type":"Private university","county":"Kiambu","town":"Thika","web":"https://www.mku.ac.ke"}
+  {
+    "id": 90001,
+    "slug": "strathmore-university",
+    "name": "Strathmore University",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.strathmore.edu"
+  },
+  {
+    "id": 90002,
+    "slug": "usiu-africa",
+    "name": "United States International University Africa (USIU-Africa)",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.usiu.ac.ke"
+  },
+  {
+    "id": 90003,
+    "slug": "kenya-methodist-university",
+    "name": "Kenya Methodist University",
+    "type": "Private university",
+    "county": "Meru",
+    "town": "Meru",
+    "web": "https://www.kemu.ac.ke"
+  },
+  {
+    "id": 90004,
+    "slug": "mount-kenya-university",
+    "name": "Mount Kenya University",
+    "type": "Private university",
+    "county": "Kiambu",
+    "town": "Thika",
+    "web": "https://www.mku.ac.ke"
+  },
+  {
+    "id": 90005,
+    "slug": "kabarak-university",
+    "name": "Kabarak University",
+    "type": "Private university",
+    "county": "Nakuru",
+    "town": "Nakuru",
+    "web": "https://www.kabarak.ac.ke"
+  },
+  {
+    "id": 90006,
+    "slug": "daystar-university",
+    "name": "Daystar University",
+    "type": "Private university",
+    "county": "Machakos",
+    "town": "Athi River",
+    "web": "https://www.daystar.ac.ke"
+  },
+  {
+    "id": 90007,
+    "slug": "kca-university",
+    "name": "KCA University",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.kcau.ac.ke"
+  },
+  {
+    "id": 90008,
+    "slug": "africa-nazarene-university",
+    "name": "Africa Nazarene University",
+    "type": "Private university",
+    "county": "Kajiado",
+    "town": "Ongata Rongai",
+    "web": "https://www.anu.ac.ke"
+  },
+  {
+    "id": 90009,
+    "slug": "zetech-university",
+    "name": "Zetech University",
+    "type": "Private university",
+    "county": "Kiambu",
+    "town": "Ruiru",
+    "web": "https://www.zetech.ac.ke"
+  },
+  {
+    "id": 90010,
+    "slug": "riara-university",
+    "name": "Riara University",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.riarauniversity.ac.ke"
+  },
+  {
+    "id": 90011,
+    "slug": "catholic-university-of-eastern-africa",
+    "name": "Catholic University of Eastern Africa",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.cuea.edu"
+  },
+  {
+    "id": 90012,
+    "slug": "pan-africa-christian-university",
+    "name": "Pan Africa Christian University",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://www.pacuniversity.ac.ke"
+  },
+  {
+    "id": 90013,
+    "slug": "scott-christian-university",
+    "name": "Scott Christian University",
+    "type": "Private university",
+    "county": "Machakos",
+    "town": "Machakos",
+    "web": "https://scott.ac.ke"
+  },
+  {
+    "id": 90014,
+    "slug": "st-pauls-university",
+    "name": "St. Paul's University",
+    "type": "Private university",
+    "county": "Kiambu",
+    "town": "Limuru",
+    "web": "https://www.spu.ac.ke"
+  },
+  {
+    "id": 90015,
+    "slug": "amref-international-university",
+    "name": "Amref International University",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://amref.ac.ke"
+  },
+  {
+    "id": 90016,
+    "slug": "presbyterian-university-of-east-africa",
+    "name": "Presbyterian University of East Africa",
+    "type": "Private university",
+    "county": "Kiambu",
+    "town": "Kikuyu",
+    "web": "https://www.puea.ac.ke"
+  },
+  {
+    "id": 90017,
+    "slug": "gretsa-university",
+    "name": "Gretsa University",
+    "type": "Private university",
+    "county": "Kiambu",
+    "town": "Thika",
+    "web": "https://gretsauniversity.ac.ke"
+  },
+  {
+    "id": 90018,
+    "slug": "management-university-of-africa",
+    "name": "Management University of Africa",
+    "type": "Private university",
+    "county": "Nairobi",
+    "town": "Nairobi",
+    "web": "https://mua.ac.ke"
+  }
 ]
