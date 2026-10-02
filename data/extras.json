@@ -119,5 +119,60 @@
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
+  },
+  "multimedia-university-of-kenya": {
+    "email": "admissions@mmu.ac.ke",
+    "phone": "0736 544 146, 0713 508 278 (admissions)",
+    "address": "P.O. Box 15653-00503, Nairobi (Magadi Road, Karen)",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "pwani-university": {
+    "email": "info@pu.ac.ke",
+    "phone": "0725 916 145, 0776 368 946 (admissions)",
+    "address": "P.O. Box 195-80108, Kilifi",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "chuka-university": {
+    "email": "cuadmissions@chuka.ac.ke",
+    "phone": "0771 094 000, 0715 505 858, 0731 620 266 (admissions)",
+    "address": "P.O. Box 109-60400, Chuka",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "university-of-embu": {
+    "email": "admissions@embuni.ac.ke",
+    "phone": "0706 528 878 (admissions)",
+    "address": "P.O. Box 6-60100, Embu",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "laikipia-university": {
+    "email": "raa@laikipia.ac.ke",
+    "address": "P.O. Box 1100-20300, Nyahururu (Registrar, Academic Affairs)",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "machakos-university": {
+    "email": "info@mksu.ac.ke",
+    "phone": "0735 247 939",
+    "address": "P.O. Box 136-90100, Machakos",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "maasai-mara-university": {
+    "email": "admissions@mmarau.ac.ke",
+    "phone": "+254 20 5131400",
+    "address": "P.O. Box 861-20500, Narok",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
   }
 }
