@@ -271,5 +271,69 @@
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
+  },
+  "university-of-eldoret": {
+    "email": "info@uoeld.ac.ke",
+    "phone": "0746 490 082 (admissions), 0774 249 552 (DVC Academic & Student Affairs)",
+    "address": "P.O. Box 1125-30100, Eldoret",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "kaimosi-friends-university": {
+    "email": "admissions@kafu.ac.ke",
+    "phone": "0743 522 152 (admissions), 0777 373 633 (general)",
+    "address": "P.O. Box 385-50309, Kaimosi",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "alupe-university": {
+    "email": "enquiries@au.ac.ke",
+    "phone": "0741 214 185, 0736 044 469",
+    "address": "P.O. Box 845-50400, Busia",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "tom-mboya-university": {
+    "email": "info@tmu.ac.ke",
+    "phone": "0746 401 706, 0746 401 703",
+    "address": "P.O. Box 199-40305, Homa Bay",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "koitaleel-samoei-university-college": {
+    "email": "admissions@ksu.ac.ke",
+    "phone": "0740 183 955, 020 491 5316 (admissions)",
+    "address": "P.O. Box 5-30307, Mosoriot",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "turkana-university-college": {
+    "email": "registrarac@tuc.ac.ke",
+    "phone": "0792 800 500, 0792 802 802",
+    "address": "P.O. Box 69-30500, Lodwar",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "open-university-of-kenya": {
+    "email": "info@ouk.ac.ke",
+    "phone": "0702 212 212, 0703 211 211, 020 200 0211",
+    "address": "P.O. Box 2440-00606, Nairobi",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "mama-ngina-university-college": {
+    "email": "admissions@mnu.ac.ke",
+    "phone": "0745 152 619 (admissions), 0702 125 192 (academic/admission enquiries)",
+    "address": "P.O. Box 444-01030, Gatundu",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
   }
 }
