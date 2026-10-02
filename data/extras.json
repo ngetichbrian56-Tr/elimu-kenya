@@ -7,12 +7,20 @@
   "kenyatta-university": {
     "fees": "See the fees page on ku.ac.ke for the current schedule. Fees differ for students admitted in different years, so check the one for your intake.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "info@ku.ac.ke",
+    "phone": "0719 739438, 0719 739445, 0716 208832, 0736 244464 (admissions)",
+    "address": "P.O. Box 43844-00100, Nairobi",
+    "contactChecked": "October 2026"
   },
   "moi-university": {
     "fees": "See the fees page on mu.ac.ke for the current schedule.",
     "apply": "https://students.kuccps.ac.ke",
-    "updated": "October 2026"
+    "updated": "October 2026",
+    "email": "admissions@mu.ac.ke",
+    "phone": "0793 971 492 (main campus: calls, text, WhatsApp)",
+    "address": "P.O. Box 3900-30100, Kesses, Eldoret",
+    "contactChecked": "October 2026"
   },
   "egerton-university": {
     "fees": "See the fees page on egerton.ac.ke for the current schedule.",
@@ -36,6 +44,15 @@
   },
   "dedan-kimathi-university-of-technology": {
     "fees": "See the fees page on dkut.ac.ke for the current schedule.",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "makueni-university-college": {
+    "web": "https://www.muco.ac.ke",
+    "email": "wotecampus@seku.ac.ke",
+    "phone": "+254 704 122 140",
+    "address": "P.O. Box 441-90300, Makueni (Wote Campus)",
+    "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
   }
