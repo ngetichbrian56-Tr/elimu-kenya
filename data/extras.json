@@ -31,7 +31,7 @@
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026",
     "email": "admissions@egerton.ac.ke",
-    "phone": "0772 817 106 (admissions)",
+    "phone": "0772 817 106, 0759 238 112 (admissions), 0775 071 854 (Registrar, Academic Affairs)",
     "address": "P.O. Box 536-20115, Egerton-Njoro",
     "contactChecked": "October 2026"
   },
@@ -153,8 +153,9 @@
     "updated": "October 2026"
   },
   "laikipia-university": {
-    "email": "raa@laikipia.ac.ke",
-    "address": "P.O. Box 1100-20300, Nyahururu (Registrar, Academic Affairs)",
+    "email": "admissions@laikipia.ac.ke",
+    "phone": "0729 281 902, 0729 285 902 (admissions), 0713 552 761 (general)",
+    "address": "P.O. Box 1100-20300, Nyahururu",
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
@@ -171,6 +172,102 @@
     "email": "admissions@mmarau.ac.ke",
     "phone": "+254 20 5131400",
     "address": "P.O. Box 861-20500, Narok",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "kibabii-university": {
+    "email": "admissions@kibu.ac.ke",
+    "phone": "0701 853 387, 0708 085 934",
+    "address": "P.O. Box 1699-50200, Bungoma",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "rongo-university": {
+    "email": "admissions@rongovarsity.ac.ke",
+    "phone": "0794 781 865, 0794 781 551 (admissions)",
+    "address": "P.O. Box 103-40404, Rongo (Kitere Hill)",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "university-of-kabianga": {
+    "email": "info@kabianga.ac.ke",
+    "phone": "0715 655 949, 020 217 2665 (admissions office: 020 234 3814)",
+    "address": "P.O. Box 2030-20200, Kericho",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "muranga-university-of-technology": {
+    "email": "admissions@mut.ac.ke",
+    "phone": "0798 959 217",
+    "address": "P.O. Box 75-10200, Murang'a",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "garissa-university": {
+    "email": "admissions@gau.ac.ke",
+    "phone": "0721 966 418 (Head of Admissions), 0713 680 988 (Registrar, ASA)",
+    "address": "P.O. Box 1801-70100, Garissa",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "taita-taveta-university": {
+    "email": "admissions@ttu.ac.ke",
+    "phone": "0721 113 302, 0774 222 064",
+    "address": "P.O. Box 635-80300, Voi",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "karatina-university": {
+    "email": "admissions@karu.ac.ke",
+    "phone": "0716 135 171, 0723 683 150 (admissions)",
+    "address": "P.O. Box 1957-10101, Karatina",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "masinde-muliro-university-of-science-and-technology": {
+    "email": "admissions@mmust.ac.ke",
+    "phone": "0716 903 672, 0702 597 360 (Registrar, Academic Affairs)",
+    "address": "P.O. Box 190-50100, Kakamega",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "kirinyaga-university": {
+    "email": "info@kyu.ac.ke",
+    "phone": "0709 742 000, 0728 499 650 (WhatsApp)",
+    "address": "P.O. Box 143-10300, Kerugoya",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "tharaka-university": {
+    "email": "info@tharaka.ac.ke",
+    "phone": "0745 838 353",
+    "address": "P.O. Box 193-60215, Marimanti",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "co-operative-university-of-kenya": {
+    "email": "admissions@cuk.ac.ke",
+    "phone": "0724 311 606",
+    "address": "P.O. Box 24814-00502, Karen, Nairobi",
+    "contactChecked": "October 2026",
+    "apply": "https://students.kuccps.ac.ke",
+    "updated": "October 2026"
+  },
+  "bomet-university": {
+    "email": "admissions@bu.ac.ke",
+    "phone": "0748 067 182",
+    "address": "P.O. Box 701-20400, Bomet",
     "contactChecked": "October 2026",
     "apply": "https://students.kuccps.ac.ke",
     "updated": "October 2026"
