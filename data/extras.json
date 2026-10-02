@@ -72,6 +72,7 @@
     "contactChecked": "October 2026"
   },
   "makueni-university-college": {
+    "fees": "See the fees page on muco.ac.ke for the current schedule.",
     "web": "https://www.muco.ac.ke",
     "email": "wotecampus@seku.ac.ke",
     "phone": "+254 704 122 140",
@@ -81,6 +82,7 @@
     "updated": "October 2026"
   },
   "meru-university-of-science-and-technology": {
+    "fees": "See the fees page on must.ac.ke for the current schedule.",
     "email": "admission@must.ac.ke",
     "phone": "0712 524 293, 0799 529 958, 0799 529 959",
     "address": "P.O. Box 972-60200, Meru",
@@ -89,6 +91,7 @@
     "updated": "October 2026"
   },
   "south-eastern-kenya-university": {
+    "fees": "See the fees page on seku.ac.ke for the current schedule.",
     "email": "info@seku.ac.ke",
     "phone": "0748 605 996 (admissions enquiries), 0748 605 997",
     "address": "P.O. Box 170-90200, Kitui",
@@ -97,6 +100,7 @@
     "updated": "October 2026"
   },
   "kisii-university": {
+    "fees": "See the fees page on kisiiuniversity.ac.ke for the current schedule.",
     "email": "acregistrar@kisiiuniversity.ac.ke",
     "phone": "0720 875 082, 020 261 0479",
     "address": "P.O. Box 408-40200, Kisii",
@@ -105,6 +109,7 @@
     "updated": "October 2026"
   },
   "jaramogi-oginga-odinga-university-of-science-and-technology": {
+    "fees": "See the fees page on jooust.ac.ke for the current schedule.",
     "email": "racademic@jooust.ac.ke",
     "phone": "0704 314 648, 057 205 8135 (Registrar, Academic Affairs)",
     "address": "P.O. Box 210-40601, Bondo",
@@ -113,6 +118,7 @@
     "updated": "October 2026"
   },
   "technical-university-of-mombasa": {
+    "fees": "See the fees page on tum.ac.ke for the current schedule.",
     "email": "info@tum.ac.ke",
     "phone": "0733 955 377",
     "address": "Tom Mboya Street, Tudor, Mombasa. P.O. Box 90420-80100",
@@ -121,6 +127,7 @@
     "updated": "October 2026"
   },
   "multimedia-university-of-kenya": {
+    "fees": "See the fees page on mmu.ac.ke for the current schedule.",
     "email": "admissions@mmu.ac.ke",
     "phone": "020 725 2000 (main line), 0736 544 146, 0713 508 278 (admissions)",
     "address": "P.O. Box 15653-00503, Nairobi (Magadi Road, Karen)",
@@ -129,6 +136,7 @@
     "updated": "October 2026"
   },
   "pwani-university": {
+    "fees": "See the fees page on pu.ac.ke for the current schedule.",
     "email": "info@pu.ac.ke",
     "phone": "0725 916 145, 0776 368 946, 0791 841 259 (admissions support)",
     "address": "P.O. Box 195-80108, Kilifi",
@@ -137,6 +145,7 @@
     "updated": "October 2026"
   },
   "chuka-university": {
+    "fees": "See the fees page on chuka.ac.ke for the current schedule.",
     "email": "admissions@chuka.ac.ke",
     "phone": "0771 094 000, 0715 505 858, 0731 620 266, 020 232 9073 (admissions)",
     "address": "P.O. Box 109-60400, Chuka",
@@ -145,6 +154,7 @@
     "updated": "October 2026"
   },
   "university-of-embu": {
+    "fees": "See the fees page on embuni.ac.ke for the current schedule.",
     "email": "admissions@embuni.ac.ke",
     "phone": "0706 528 878 (admissions), 0727 933 950 (general)",
     "address": "P.O. Box 6-60100, Embu",
@@ -153,6 +163,7 @@
     "updated": "October 2026"
   },
   "laikipia-university": {
+    "fees": "See the fees page on laikipia.ac.ke for the current schedule.",
     "email": "admissions@laikipia.ac.ke",
     "phone": "0729 281 902, 0729 285 902 (admissions), 0713 552 761 (general)",
     "address": "P.O. Box 1100-20300, Nyahururu",
@@ -161,6 +172,7 @@
     "updated": "October 2026"
   },
   "machakos-university": {
+    "fees": "See the fees page on mksu.ac.ke for the current schedule.",
     "email": "admissions@mksu.ac.ke",
     "phone": "0739 184 442 (admissions), 0735 247 939, 0795 207 117",
     "address": "P.O. Box 136-90100, Machakos",
@@ -169,6 +181,7 @@
     "updated": "October 2026"
   },
   "maasai-mara-university": {
+    "fees": "See the fees page on mmarau.ac.ke for the current schedule.",
     "email": "admissions@mmarau.ac.ke",
     "phone": "+254 20 5131400",
     "address": "P.O. Box 861-20500, Narok",
@@ -177,6 +190,7 @@
     "updated": "October 2026"
   },
   "kibabii-university": {
+    "fees": "See the fees page on kibu.ac.ke for the current schedule.",
     "email": "admissions@kibu.ac.ke",
     "phone": "0701 853 387, 0708 085 934",
     "address": "P.O. Box 1699-50200, Bungoma",
@@ -185,6 +199,7 @@
     "updated": "October 2026"
   },
   "rongo-university": {
+    "fees": "See the fees page on rongovarsity.ac.ke for the current schedule.",
     "email": "admissions@rongovarsity.ac.ke",
     "phone": "0794 781 865, 0794 781 551 (admissions)",
     "address": "P.O. Box 103-40404, Rongo (Kitere Hill)",
@@ -193,6 +208,7 @@
     "updated": "October 2026"
   },
   "university-of-kabianga": {
+    "fees": "See the fees page on kabianga.ac.ke for the current schedule.",
     "email": "info@kabianga.ac.ke",
     "phone": "0715 655 949, 020 217 2665 (admissions office: 020 234 3814)",
     "address": "P.O. Box 2030-20200, Kericho",
@@ -201,6 +217,7 @@
     "updated": "October 2026"
   },
   "muranga-university-of-technology": {
+    "fees": "See the fees page on mut.ac.ke for the current schedule.",
     "email": "admissions@mut.ac.ke",
     "phone": "0798 959 217",
     "address": "P.O. Box 75-10200, Murang'a",
@@ -209,6 +226,7 @@
     "updated": "October 2026"
   },
   "garissa-university": {
+    "fees": "See the fees page on gau.ac.ke for the current schedule.",
     "email": "admissions@gau.ac.ke",
     "phone": "0721 966 418 (Head of Admissions), 0713 680 988 (Registrar, ASA)",
     "address": "P.O. Box 1801-70100, Garissa",
@@ -217,6 +235,7 @@
     "updated": "October 2026"
   },
   "taita-taveta-university": {
+    "fees": "See the fees page on ttu.ac.ke for the current schedule.",
     "email": "admissions@ttu.ac.ke",
     "phone": "0721 113 302, 0774 222 064",
     "address": "P.O. Box 635-80300, Voi",
@@ -225,6 +244,7 @@
     "updated": "October 2026"
   },
   "karatina-university": {
+    "fees": "See the fees page on karu.ac.ke for the current schedule.",
     "email": "admissions@karu.ac.ke",
     "phone": "0716 135 171, 0723 683 150 (admissions)",
     "address": "P.O. Box 1957-10101, Karatina",
@@ -233,6 +253,7 @@
     "updated": "October 2026"
   },
   "masinde-muliro-university-of-science-and-technology": {
+    "fees": "See the fees page on mmust.ac.ke for the current schedule.",
     "email": "admissions@mmust.ac.ke",
     "phone": "0716 903 672, 0702 597 360 (Registrar, Academic Affairs)",
     "address": "P.O. Box 190-50100, Kakamega",
@@ -241,6 +262,7 @@
     "updated": "October 2026"
   },
   "kirinyaga-university": {
+    "fees": "See the fees page on kyu.ac.ke for the current schedule.",
     "email": "info@kyu.ac.ke",
     "phone": "0709 742 000, 0728 499 650 (WhatsApp)",
     "address": "P.O. Box 143-10300, Kerugoya",
@@ -249,6 +271,7 @@
     "updated": "October 2026"
   },
   "tharaka-university": {
+    "fees": "See the fees page on tharaka.ac.ke for the current schedule.",
     "email": "info@tharaka.ac.ke",
     "phone": "0745 838 353",
     "address": "P.O. Box 193-60215, Marimanti",
@@ -257,6 +280,7 @@
     "updated": "October 2026"
   },
   "co-operative-university-of-kenya": {
+    "fees": "See the fees page on cuk.ac.ke for the current schedule.",
     "email": "admissions@cuk.ac.ke",
     "phone": "0724 311 606",
     "address": "P.O. Box 24814-00502, Karen, Nairobi",
@@ -265,6 +289,7 @@
     "updated": "October 2026"
   },
   "bomet-university": {
+    "fees": "See the fees page on bu.ac.ke for the current schedule.",
     "email": "admissions@bu.ac.ke",
     "phone": "0748 067 182",
     "address": "P.O. Box 701-20400, Bomet",
@@ -273,6 +298,7 @@
     "updated": "October 2026"
   },
   "university-of-eldoret": {
+    "fees": "See the fees page on uoeld.ac.ke for the current schedule.",
     "email": "info@uoeld.ac.ke",
     "phone": "0746 490 082 (admissions), 0774 249 552 (DVC Academic & Student Affairs)",
     "address": "P.O. Box 1125-30100, Eldoret",
@@ -281,6 +307,7 @@
     "updated": "October 2026"
   },
   "kaimosi-friends-university": {
+    "fees": "See the fees page on kafu.ac.ke for the current schedule.",
     "email": "admissions@kafu.ac.ke",
     "phone": "0743 522 152 (admissions), 0777 373 633 (general)",
     "address": "P.O. Box 385-50309, Kaimosi",
@@ -289,6 +316,7 @@
     "updated": "October 2026"
   },
   "alupe-university": {
+    "fees": "See the fees page on au.ac.ke for the current schedule.",
     "email": "enquiries@au.ac.ke",
     "phone": "0741 214 185, 0736 044 469",
     "address": "P.O. Box 845-50400, Busia",
@@ -297,6 +325,7 @@
     "updated": "October 2026"
   },
   "tom-mboya-university": {
+    "fees": "See the fees page on tmu.ac.ke for the current schedule.",
     "email": "info@tmu.ac.ke",
     "phone": "0746 401 706, 0746 401 703",
     "address": "P.O. Box 199-40305, Homa Bay",
@@ -305,6 +334,7 @@
     "updated": "October 2026"
   },
   "koitaleel-samoei-university-college": {
+    "fees": "See the fees page on ksu.ac.ke for the current schedule.",
     "email": "admissions@ksu.ac.ke",
     "phone": "0740 183 955, 020 491 5316 (admissions)",
     "address": "P.O. Box 5-30307, Mosoriot",
@@ -313,6 +343,7 @@
     "updated": "October 2026"
   },
   "turkana-university-college": {
+    "fees": "See the fees page on tuc.ac.ke for the current schedule.",
     "email": "registrarac@tuc.ac.ke",
     "phone": "0792 800 500, 0792 802 802",
     "address": "P.O. Box 69-30500, Lodwar",
@@ -321,6 +352,7 @@
     "updated": "October 2026"
   },
   "open-university-of-kenya": {
+    "fees": "See the fees page on ouk.ac.ke for the current schedule.",
     "email": "info@ouk.ac.ke",
     "phone": "0702 212 212, 0703 211 211, 020 200 0211, 0709 040 600 (support: text)",
     "address": "P.O. Box 2440-00606, Nairobi",
@@ -329,6 +361,7 @@
     "updated": "October 2026"
   },
   "mama-ngina-university-college": {
+    "fees": "See the fees page on mnu.ac.ke for the current schedule.",
     "email": "admissions@mnu.ac.ke",
     "phone": "0745 152 619 (admissions), 0702 125 192 (academic/admission enquiries)",
     "address": "P.O. Box 444-01030, Gatundu",
